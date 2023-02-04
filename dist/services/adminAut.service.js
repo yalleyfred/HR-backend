@@ -13,12 +13,10 @@ class AdminAuthService {
         this.users = admins_model_1.default;
     }
     async findAllUser() {
-        // AdminMap(LocalDB);
         const users = await this.users.findAll();
         return users;
     }
     async signup(userData) {
-        // AdminMap(LocalDB);
         if ((0, util_1.isEmpty)(userData))
             throw new HttpException_1.HttpException(400, "userData is empty");
         const findUser = await this.users.findOne({
@@ -34,7 +32,6 @@ class AdminAuthService {
         return createUserData;
     }
     async login(userData) {
-        // AdminMap(LocalDB);
         if ((0, util_1.isEmpty)(userData))
             throw new HttpException_1.HttpException(400, "userData is empty");
         const findUser = await this.users.findOne({
@@ -52,7 +49,6 @@ class AdminAuthService {
         return { cookie, findUser };
     }
     async logout(userData) {
-        // AdminMap(LocalDB);
         if ((0, util_1.isEmpty)(userData))
             throw new HttpException_1.HttpException(400, "userData is empty");
         const findUser = await this.users.findOne({

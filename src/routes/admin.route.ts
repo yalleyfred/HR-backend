@@ -17,11 +17,11 @@ class AdminAuthRoute implements Routes {
     }
   
     private initializeRoutes() {
-      this.router.get(`${this.path}employees`, this.employeeController.getUsers);
-      this.router.get(`${this.path}employees/:id(\\d+)`, this.employeeController.getUserById);
-      this.router.post(`${this.path}employees`, validationMiddleware(CreateEmployeeDto, 'body'), this.employeeController.createUser);
-      this.router.put(`${this.path}employees/:id(\\d+)`, validationMiddleware(CreateEmployeeDto, 'body', true), this.employeeController.updateUser);
-      this.router.delete(`${this.path}employees/:id(\\d+)`, this.employeeController.deleteUser);
+      this.router.get(`${this.path}employees`, authMiddleware, this.employeeController.getEmployees);
+      this.router.get(`${this.path}employees/:id`, authMiddleware, this.employeeController.getEmployeeById);
+      this.router.post(`${this.path}employees`, validationMiddleware(CreateEmployeeDto, 'body'), authMiddleware, this.employeeController.createEmployee);
+      this.router.put(`${this.path}employees/:id`, validationMiddleware(CreateEmployeeDto, 'body', true), authMiddleware, this.employeeController.updateEmployee);
+      this.router.delete(`${this.path}employees/:id`, authMiddleware, this.employeeController.deleteEmployee);
 
 
       this.router.get(`${this.path}`, this.authController.getUsers);

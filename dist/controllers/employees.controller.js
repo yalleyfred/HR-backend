@@ -6,52 +6,52 @@ const employees_service_1 = tslib_1.__importDefault(require("../services/employe
 class EmployeeController {
     constructor() {
         this.employeeService = new employees_service_1.default();
-        this.getUsers = async (req, res, next) => {
+        this.getEmployees = async (req, res, next) => {
             try {
-                const findAllUsersData = await this.employeeService.findAllUser();
+                const findAllUsersData = await this.employeeService.findAllEmployees();
                 res.status(200).json({ data: findAllUsersData, message: 'findAll' });
             }
             catch (error) {
                 next(error);
             }
         };
-        this.getUserById = async (req, res, next) => {
+        this.getEmployeeById = async (req, res, next) => {
             try {
                 const userId = Number(req.params.id);
-                const findOneUserData = await this.employeeService.findUserById(userId);
+                const findOneUserData = await this.employeeService.findEmployeeById(userId);
                 res.status(200).json({ data: findOneUserData, message: 'findOne' });
             }
             catch (error) {
                 next(error);
             }
         };
-        this.createUser = async (req, res, next) => {
+        this.createEmployee = async (req, res, next) => {
             try {
                 const userData = req.body;
                 // console.log(userData);
-                const createUserData = await this.employeeService.createUser(userData);
+                const createUserData = await this.employeeService.createEmployee(userData);
                 res.status(201).json({ data: createUserData, message: 'created' });
             }
             catch (error) {
                 next(error);
             }
         };
-        this.updateUser = async (req, res, next) => {
+        this.updateEmployee = async (req, res, next) => {
             try {
                 const userId = Number(req.params.id);
                 const userData = req.body;
-                const updateUserData = await this.employeeService.updateUser(userId, userData);
-                res.status(200).json({ data: updateUserData, message: 'updated' });
+                await this.employeeService.updateEmployee(userId, userData);
+                res.status(200).json({ message: 'updated' });
             }
             catch (error) {
                 next(error);
             }
         };
-        this.deleteUser = async (req, res, next) => {
+        this.deleteEmployee = async (req, res, next) => {
             try {
                 const userId = Number(req.params.id);
-                const deleteUserData = await this.employeeService.deleteUser(userId);
-                res.status(200).json({ data: deleteUserData, message: 'deleted' });
+                await this.employeeService.deleteEmployee(userId);
+                res.status(200).json({ message: 'deleted' });
             }
             catch (error) {
                 next(error);

@@ -1,6 +1,6 @@
 import { LoginUserDto } from '../dtos/users.dto';
 import { TokenData } from '../interfaces/auth.interface';
-import { EmployeeInt } from '../interfaces/student.interface';
+import { EmployeeInt } from '../interfaces/employees.interface.ts';
 import Employees from '../models/employees.model';
 declare class EmployeesAuthService {
     employee: typeof Employees;

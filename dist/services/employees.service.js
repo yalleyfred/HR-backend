@@ -8,26 +8,23 @@ const employees_model_1 = tslib_1.__importDefault(require("../models/employees.m
 const util_1 = require("../utils/util");
 class EmployeeService {
     constructor() {
-        this.users = employees_model_1.default;
+        this.employee = employees_model_1.default;
     }
-    async findAllUser() {
-        // AdminMap(LocalDB);
-        const users = await this.users.findAll();
+    async findAllEmployees() {
+        const users = await this.employee.findAll();
         return users;
     }
-    async findUserById(userId) {
-        // AdminMap(LocalDB);
-        const findUser = await this.users.findOne({ where: { id: userId } });
+    async findEmployeeById(userId) {
+        const findUser = await this.employee.findOne({ where: { id: userId } });
         if (!findUser)
             throw new HttpException_1.HttpException(409, "Employee doesn't exist");
         console.log(findUser);
         return findUser;
     }
-    async createUser(userData) {
-        // AdminMap(LocalDB);
+    async createEmployee(userData) {
         if ((0, util_1.isEmpty)(userData))
             throw new HttpException_1.HttpException(400, "EmployeeData is empty");
-        const findUser = await this.users.findOne({
+        const findUser = await this.employee.findOne({
             where: {
                 email: userData.email,
             },
@@ -36,31 +33,34 @@ class EmployeeService {
             throw new HttpException_1.HttpException(409, `This email ${userData.email} already exists`);
         const hashedPassword = await (0, bcrypt_1.hash)(userData.password, 10);
         const createUserData = { first_name: userData.first_name, last_name: userData.last_name, email: userData.email, password: hashedPassword, gender: userData.gender, dob: userData.dob, nationality: userData.nationality, highest_qualifications: userData.highest_qualifications, phone: userData.phone, department: userData.department, snnit_no: userData.snnit_no, tin: userData.tin };
-        await this.users.create(createUserData);
+        await this.employee.create(createUserData);
         return createUserData;
     }
-    async updateUser(userId, userData) {
-        // AdminMap(LocalDB);
+    async updateEmployee(userId, userData) {
         if ((0, util_1.isEmpty)(userData))
             throw new HttpException_1.HttpException(400, "EmployeeData is empty");
-        const findUser = await this.users.findAll({ where: { id: userId } });
+        const findUser = await this.employee.findOne({ where: { id: userId } });
         if (!findUser)
             throw new HttpException_1.HttpException(409, "Employee doesn't exist");
+        // console.log(findUser);
         const hashedPassword = await (0, bcrypt_1.hash)(userData.password, 10);
-        const updateUserData = await findUser.map((user) => {
-            // if (user.id === userId) user = { first_name: userData.first_name, last_name: userData.last_name, email: userData.email, password: hashedPassword, gender: userData.gender, dob: userData.dob, nationality: userData.nationality, highest_qualifications: userData.highest_qualifications, phone: userData.phone, city: userData.city, sponsor_name: userData.sponsor_name, sponsor_email: userData.sponsor_email, sponsor_phone: userData.sponsor_phone };
-            return user;
+        const updateUserData = await this.employee.update({ first_name: userData.first_name, last_name: userData.last_name, email: userData.email, password: hashedPassword, gender: userData.gender, dob: userData.dob, nationality: userData.nationality, highest_qualifications: userData.highest_qualifications, phone: userData.phone, department: userData.department, snnit_no: userData.snnit_no, tin: userData.tin }, {
+            where: {
+                id: userId
+            }
         });
-        return updateUserData;
+        return;
     }
-    async deleteUser(userId) {
-        // AdminMap(LocalDB)
-        const findUser = await this.users.findOne({ where: { id: userId } });
+    async deleteEmployee(userId) {
+        const findUser = await this.employee.findOne({ where: { id: userId } });
         if (!findUser)
             throw new HttpException_1.HttpException(409, "Employee doesn't exist");
-        const deleteUserData = (await this.findAllUser());
-        // .filter(user => user.id !== findUser.id)
-        return deleteUserData;
+        await this.employee.destroy({
+            where: {
+                id: userId
+            }
+        });
+        return;
     }
 }
 exports.default = EmployeeService;

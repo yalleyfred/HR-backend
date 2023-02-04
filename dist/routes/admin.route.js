@@ -16,11 +16,11 @@ class AdminAuthRoute {
         this.initializeRoutes();
     }
     initializeRoutes() {
-        this.router.get(`${this.path}employees`, this.employeeController.getUsers);
-        this.router.get(`${this.path}employees/:id(\\d+)`, this.employeeController.getUserById);
-        this.router.post(`${this.path}employees`, (0, validation_middleware_1.default)(users_dto_1.CreateEmployeeDto, 'body'), this.employeeController.createUser);
-        this.router.put(`${this.path}employees/:id(\\d+)`, (0, validation_middleware_1.default)(users_dto_1.CreateEmployeeDto, 'body', true), this.employeeController.updateUser);
-        this.router.delete(`${this.path}employees/:id(\\d+)`, this.employeeController.deleteUser);
+        this.router.get(`${this.path}employees`, auth_middleware_1.default, this.employeeController.getEmployees);
+        this.router.get(`${this.path}employees/:id`, auth_middleware_1.default, this.employeeController.getEmployeeById);
+        this.router.post(`${this.path}employees`, (0, validation_middleware_1.default)(users_dto_1.CreateEmployeeDto, 'body'), auth_middleware_1.default, this.employeeController.createEmployee);
+        this.router.put(`${this.path}employees/:id`, (0, validation_middleware_1.default)(users_dto_1.CreateEmployeeDto, 'body', true), auth_middleware_1.default, this.employeeController.updateEmployee);
+        this.router.delete(`${this.path}employees/:id`, auth_middleware_1.default, this.employeeController.deleteEmployee);
         this.router.get(`${this.path}`, this.authController.getUsers);
         this.router.post(`${this.path}signup`, (0, validation_middleware_1.default)(users_dto_1.CreateUserDto, 'body'), this.authController.signUp);
         this.router.post(`${this.path}login`, (0, validation_middleware_1.default)(users_dto_1.LoginUserDto, 'body'), this.authController.logIn);

@@ -1,36 +1,36 @@
 import { hash } from 'bcrypt';
 import { CreateEmployeeDto } from '../dtos/users.dto';
 import { HttpException } from '../exceptions/HttpException';
-import { EmployeeInt, User } from '../interfaces/student.interface';
+import { EmployeeInt, User } from '../interfaces/employees.interface.ts';
 import Employees from '../models/employees.model';
 // import {LocalDB} from '../Database'
 import { isEmpty } from '../utils/util';
 
 class EmployeeService {
-  public users = Employees;
+  public employee = Employees;
 
-  public async findAllUser(): Promise<EmployeeInt[]> {
-    // AdminMap(LocalDB);
-    const users: EmployeeInt[] = await this.users.findAll();
+  public async findAllEmployees(): Promise<EmployeeInt[]> {
+
+    const users: EmployeeInt[] = await this.employee.findAll();
     return users;
   }
 
-  public async findUserById(userId: number): Promise<EmployeeInt> {
-    // AdminMap(LocalDB);
-    const findUser: EmployeeInt = await this.users.findOne({where:{id: userId}});
+  public async findEmployeeById(userId: number): Promise<EmployeeInt> {
+
+    const findUser: EmployeeInt = await this.employee.findOne({where:{id: userId}});
     if (!findUser) throw new HttpException(409, "Employee doesn't exist");
     console.log(findUser);
     
     return findUser;
   }
 
-  public async createUser(userData: CreateEmployeeDto): Promise<EmployeeInt> {
-    // AdminMap(LocalDB);
+  public async createEmployee(userData: CreateEmployeeDto): Promise<EmployeeInt> {
+
     
     
     if (isEmpty(userData)) throw new HttpException(400, "EmployeeData is empty");
 
-    const findUser: EmployeeInt = await this.users.findOne({
+    const findUser: EmployeeInt = await this.employee.findOne({
       where: {
         email: userData.email,
       },
@@ -53,35 +53,42 @@ class EmployeeService {
       snnit_no: string;
       tin: string;
     }= { first_name: userData.first_name, last_name: userData.last_name, email: userData.email, password: hashedPassword, gender: userData.gender, dob: userData.dob, nationality: userData.nationality, highest_qualifications: userData.highest_qualifications, phone: userData.phone, department: userData.department, snnit_no: userData.snnit_no, tin: userData.tin};
-    await this.users.create(createUserData)
+    await this.employee.create(createUserData)
     return createUserData;
   }
 
-  public async updateUser(userId: number, userData: CreateEmployeeDto): Promise<EmployeeInt[]> {
-    // AdminMap(LocalDB);
+  public async updateEmployee(userId: number, userData: CreateEmployeeDto): Promise<void> {
+
     if (isEmpty(userData)) throw new HttpException(400, "EmployeeData is empty");
 
-    const findUser: EmployeeInt[] = await this.users.findAll({where:{id: userId}});
+    const findUser: EmployeeInt = await this.employee.findOne({where:{id: userId}});
     if (!findUser) throw new HttpException(409, "Employee doesn't exist");
-
+    // console.log(findUser);
+    
     const hashedPassword = await hash(userData.password, 10);
-    const updateUserData: EmployeeInt[] = await findUser.map((user: EmployeeInt) => {
-      // if (user.id === userId) user = { first_name: userData.first_name, last_name: userData.last_name, email: userData.email, password: hashedPassword, gender: userData.gender, dob: userData.dob, nationality: userData.nationality, highest_qualifications: userData.highest_qualifications, phone: userData.phone, city: userData.city, sponsor_name: userData.sponsor_name, sponsor_email: userData.sponsor_email, sponsor_phone: userData.sponsor_phone };
-      return user;
+    const updateUserData = await this.employee.update({ first_name: userData.first_name, last_name: userData.last_name, email: userData.email, password: hashedPassword, gender: userData.gender, dob: userData.dob, nationality: userData.nationality, highest_qualifications: userData.highest_qualifications, phone: userData.phone, department: userData.department, snnit_no: userData.snnit_no, tin: userData.tin }, {
+      where: {
+        id: userId
+      }
     });
 
-    return updateUserData;
+    
+    return;
   }
 
-  public async deleteUser(userId: number): Promise<EmployeeInt[]> {
-    // AdminMap(LocalDB)
-    const findUser: EmployeeInt = await this.users.findOne({where:{id: userId}});
+  public async deleteEmployee(userId: number): Promise<void> {
+
+    const findUser: EmployeeInt = await this.employee.findOne({where:{id: userId}});
     if (!findUser) throw new HttpException(409, "Employee doesn't exist");
 
 
-    const deleteUserData: EmployeeInt[] = (await this.findAllUser())
-    // .filter(user => user.id !== findUser.id)
-    return deleteUserData;
+       await this.employee.destroy({
+      where: {
+        id: userId
+      }
+    });
+
+    return
   }
 }
 

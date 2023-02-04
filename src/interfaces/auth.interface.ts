@@ -1,5 +1,5 @@
 import { Request } from 'express';
-import { EmployeeInt, User } from '../interfaces/student.interface';
+import { EmployeeInt, User } from './employees.interface.ts';
 // import { Cou } from './course.interface';
 
 export interface DataStoredInToken {
@@ -11,7 +11,7 @@ export interface TokenData {
   expiresIn: number;
 }
 
-export interface RequestWithStudent extends Request {
+export interface RequestWithEmployee extends Request {
   user: EmployeeInt;
 }
 

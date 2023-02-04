@@ -13,13 +13,13 @@ class AdminAuthService {
   public users = Admins;
 
   public async findAllUser(): Promise<User[]> {
-    // AdminMap(LocalDB);
+    
     const users: User[] = await this.users.findAll();
     return users;
   }
 
   public async signup(userData: CreateUserDto): Promise<User> {
-    // AdminMap(LocalDB);
+    
     if (isEmpty(userData)) throw new HttpException(400, "userData is empty");
 
     const findUser: User = await this.users.findOne({
@@ -42,7 +42,7 @@ class AdminAuthService {
   }
 
   public async login(userData: LoginUserDto): Promise<{ cookie: string, findUser: User }> {
-    // AdminMap(LocalDB);
+    
     if (isEmpty(userData)) throw new HttpException(400, "userData is empty");
 
     const findUser: {
@@ -71,7 +71,7 @@ class AdminAuthService {
   }
 
   public async logout(userData: User): Promise<User> {
-    // AdminMap(LocalDB);
+    
     if (isEmpty(userData)) throw new HttpException(400, "userData is empty");
 
     const findUser: User = await this.users.findOne({

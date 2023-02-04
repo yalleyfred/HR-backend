@@ -40,4 +40,4 @@ class EmployeeAuthController {
     }
 }
 exports.default = EmployeeAuthController;
-//# sourceMappingURL=auth.controller.js.map
+//# sourceMappingURL=employeeAuth.controller.js.map

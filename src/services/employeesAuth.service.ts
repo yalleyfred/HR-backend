@@ -4,7 +4,7 @@ import { SECRET_KEY } from '../config';
 import { CreateEmployeeDto, LoginUserDto } from '../dtos/users.dto';
 import { HttpException } from '../exceptions/HttpException';
 import { DataStoredInToken, TokenData } from '../interfaces/auth.interface';
-import { EmployeeInt, User } from '../interfaces/student.interface';
+import { EmployeeInt, User } from '../interfaces/employees.interface.ts';
 import Employees from '../models/employees.model';
 // import {LocalDB} from '../Database'
 import { isEmpty } from '../utils/util';

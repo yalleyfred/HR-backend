@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from "express";
 import { CreateUserDto, LoginUserDto } from "../dtos/users.dto";
 import { RequestWithUser } from "../interfaces/auth.interface";
-import { User } from "../interfaces/student.interface";
+import { User } from "../interfaces/employees.interface.ts";
 import AuthService from "../services/adminAut.service";
 
 class AdminAuthController {
