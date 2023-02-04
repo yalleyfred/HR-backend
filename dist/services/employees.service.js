@@ -4,7 +4,6 @@ const tslib_1 = require("tslib");
 const bcrypt_1 = require("bcrypt");
 const HttpException_1 = require("../exceptions/HttpException");
 const employees_model_1 = tslib_1.__importDefault(require("../models/employees.model"));
-// import {LocalDB} from '../Database'
 const util_1 = require("../utils/util");
 class EmployeeService {
     constructor() {
@@ -18,7 +17,6 @@ class EmployeeService {
         const findUser = await this.employee.findOne({ where: { id: userId } });
         if (!findUser)
             throw new HttpException_1.HttpException(409, "Employee doesn't exist");
-        console.log(findUser);
         return findUser;
     }
     async createEmployee(userData) {

@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
 const employees_service_1 = tslib_1.__importDefault(require("../services/employees.service"));
-// import {LocalDB} from '../Database'
 class EmployeeController {
     constructor() {
         this.employeeService = new employees_service_1.default();

@@ -14,6 +14,7 @@ class AuthRoute {
         this.initializeRoutes();
     }
     initializeRoutes() {
+        this.router.get(`${this.path}department`, auth_middleware_1.default, this.employeeAuthController.getAllEmployees);
         // this.router.post(`${this.path}signup`, validationMiddleware(CreateStudentDto, 'body'), this.authController.signUp);
         this.router.post(`${this.path}login`, (0, validation_middleware_1.default)(users_dto_1.LoginUserDto, 'body'), this.employeeAuthController.logIn);
         this.router.post(`${this.path}logout`, auth_middleware_1.default, this.employeeAuthController.logOut);

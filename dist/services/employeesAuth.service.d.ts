@@ -13,5 +13,6 @@ declare class EmployeesAuthService {
         id: number;
     }): TokenData;
     createCookie(tokenData: TokenData): string;
+    getAllEmployee(): Promise<EmployeeInt[]>;
 }
 export default EmployeesAuthService;

@@ -13,7 +13,7 @@ class EmployeesAuthService {
         this.employee = employees_model_1.default;
     }
     //   public async signup(userData: CreateEmployeeDto): Promise<EmployeeInt> {
-    //     // StudentMap(LocalDB);
+    // ;
     //     if (isEmpty(userData)) throw new HttpException(400, "userData is empty");
     //     const findUser: EmployeeInt = await this.employee.findOne({
     //       where: {
@@ -41,7 +41,6 @@ class EmployeesAuthService {
     //     return createUserData;
     //   }
     async login(userData) {
-        // StudentMap(LocalDB)
         if ((0, util_1.isEmpty)(userData))
             throw new HttpException_1.HttpException(400, "EmployeeData is empty");
         const findUser = await this.employee.findOne({
@@ -59,7 +58,6 @@ class EmployeesAuthService {
         return { cookie, findUser };
     }
     async logout(userData) {
-        // StudentMap(LocalDB)
         if ((0, util_1.isEmpty)(userData))
             throw new HttpException_1.HttpException(400, "EmployeeData is empty");
         const findUser = await this.employee.findOne({
@@ -80,6 +78,10 @@ class EmployeesAuthService {
     }
     createCookie(tokenData) {
         return `Authorization=${tokenData.token}; HttpOnly; Max-Age=${tokenData.expiresIn};`;
+    }
+    async getAllEmployee() {
+        const AllEmployee = await this.employee.findAll();
+        return AllEmployee;
     }
 }
 exports.default = EmployeesAuthService;

@@ -5,5 +5,6 @@ declare class EmployeeAuthController {
     employeeAuthService: EmployeeAuthService;
     logIn: (req: Request, res: Response, next: NextFunction) => Promise<void>;
     logOut: (req: RequestWithEmployee, res: Response, next: NextFunction) => Promise<void>;
+    getAllEmployees: (req: Request, res: Response, next: NextFunction) => Promise<void>;
 }
 export default EmployeeAuthController;

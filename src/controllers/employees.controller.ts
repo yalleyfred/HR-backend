@@ -1,12 +1,11 @@
 import { NextFunction, Request, Response } from 'express';
 import { CreateEmployeeDto } from '../dtos/users.dto';
 import { User, EmployeeInt } from '../interfaces/employees.interface.ts';
-import employeeService from '../services/employees.service';
-import Admins from '@models/admins.model';
-// import {LocalDB} from '../Database'
+import EmployeeService from '../services/employees.service';
+
 
 class EmployeeController {
-  public employeeService = new employeeService();
+  public employeeService = new EmployeeService();
 
   public getEmployees = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {

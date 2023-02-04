@@ -1,4 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
+import { async } from 'rxjs';
 import { CreateEmployeeDto, LoginUserDto, CreateUserDto } from '../dtos/users.dto';
 import { RequestWithEmployee, RequestWithUser } from '../interfaces/auth.interface';
 import { EmployeeInt, User } from '../interfaces/employees.interface.ts';
@@ -44,6 +45,16 @@ class EmployeeAuthController {
       next(error);
     }
   };
+
+
+  public getAllEmployees = async(req: Request, res: Response, next: NextFunction): Promise<void>  => {
+    try{
+     
+      const findAllUsersData: EmployeeInt[] = await this.employeeAuthService.getAllEmployee();
+    }catch(error) {
+      next(error);
+    }
+  }
 }
 
 export default EmployeeAuthController;

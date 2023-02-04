@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
-import employeeService from '../services/employees.service';
+import EmployeeService from '../services/employees.service';
 declare class EmployeeController {
-    employeeService: employeeService;
+    employeeService: EmployeeService;
     getEmployees: (req: Request, res: Response, next: NextFunction) => Promise<void>;
     getEmployeeById: (req: Request, res: Response, next: NextFunction) => Promise<void>;
     createEmployee: (req: Request, res: Response, next: NextFunction) => Promise<void>;

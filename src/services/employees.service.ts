@@ -3,7 +3,6 @@ import { CreateEmployeeDto } from '../dtos/users.dto';
 import { HttpException } from '../exceptions/HttpException';
 import { EmployeeInt, User } from '../interfaces/employees.interface.ts';
 import Employees from '../models/employees.model';
-// import {LocalDB} from '../Database'
 import { isEmpty } from '../utils/util';
 
 class EmployeeService {
@@ -19,7 +18,6 @@ class EmployeeService {
 
     const findUser: EmployeeInt = await this.employee.findOne({where:{id: userId}});
     if (!findUser) throw new HttpException(409, "Employee doesn't exist");
-    console.log(findUser);
     
     return findUser;
   }

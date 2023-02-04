@@ -37,6 +37,14 @@ class EmployeeAuthController {
                 next(error);
             }
         };
+        this.getAllEmployees = async (req, res, next) => {
+            try {
+                const findAllUsersData = await this.employeeAuthService.getAllEmployee();
+            }
+            catch (error) {
+                next(error);
+            }
+        };
     }
 }
 exports.default = EmployeeAuthController;
