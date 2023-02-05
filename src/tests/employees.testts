@@ -1,0 +1,63 @@
+import request from 'supertest';
+import App from '../app';
+import { CreateUserDto } from '../dtos/users.dto';
+import { User } from '../interfaces/admin.interface';
+import userModel from '../models/admins.model';
+import AdminAuthRoute from '../routes/admin.route';
+
+afterAll(async () => {
+  await new Promise<void>(resolve => setTimeout(() => resolve(), 500));
+});
+
+describe('Employee endpoints', () => {
+  it('should create a new employee record', async () => {
+    const authRoute = new AdminAuthRoute();
+      const app = new App([authRoute]);
+    const res = await request(app.getServer())
+      .post(`${authRoute.path}employees`)
+      .send({
+        firstName: 'John',
+        lastName: 'Doe',
+        email: 'johndoe@example.com',
+        departmentId: 1
+      });
+    expect(res.statusCode).toEqual(201);
+    expect(res.body).toHaveProperty('id');
+  });
+
+  it('should retrieve a list of all employees', async () => {
+    const authRoute = new AdminAuthRoute();
+      const app = new App([authRoute]);
+    const res = await request(app.getServer()).get(`${authRoute.path}employees`);
+    expect(res.statusCode).toEqual(200);
+    expect(Array.isArray(res.body)).toBe(true);
+  });
+
+  it('should retrieve an employee by ID', async () => {
+    const authRoute = new AdminAuthRoute();
+      const app = new App([authRoute]);
+    const res = await request(app.getServer()).get(`${authRoute.path}employees/1`);
+    expect(res.statusCode).toEqual(200);
+    expect(res.body).toHaveProperty('id');
+  });
+
+  it('should update an employee record', async () => {
+    const authRoute = new AdminAuthRoute();
+      const app = new App([authRoute]);
+    const res = await request(app.getServer())
+      .put(`${authRoute.path}employees/1`)
+      .send({
+        firstName: 'Jane'
+      });
+    expect(res.statusCode).toEqual(200);
+    expect(res.body[0]).toEqual(1);
+  });
+
+  it('should delete an employee record', async () => {
+    const authRoute = new AdminAuthRoute();
+      const app = new App([authRoute]);
+    const res = await request(app.getServer()).delete(`${authRoute.path}employees/1`);
+    expect(res.statusCode).toEqual(204);
+  });
+});
+

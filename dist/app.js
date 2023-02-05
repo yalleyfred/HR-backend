@@ -9,6 +9,9 @@ const helmet_1 = tslib_1.__importDefault(require("helmet"));
 const hpp_1 = tslib_1.__importDefault(require("hpp"));
 const config_1 = require("./config");
 const logger_1 = require("./utils/logger");
+const error_middleware_1 = tslib_1.__importDefault(require("./middlewares/error.middleware"));
+const swagger_jsdoc_1 = tslib_1.__importDefault(require("swagger-jsdoc"));
+const swagger_ui_express_1 = tslib_1.__importDefault(require("swagger-ui-express"));
 class App {
     constructor(routes) {
         this.app = (0, express_1.default)();
@@ -16,8 +19,8 @@ class App {
         this.port = 6000;
         this.initializeMiddlewares();
         this.initializeRoutes(routes);
-        // this.initializeSwagger();
-        // this.initializeErrorHandling();
+        this.initializeSwagger();
+        this.initializeErrorHandling();
     }
     listen() {
         this.app.listen(this.port, () => {
@@ -44,6 +47,23 @@ class App {
         routes.forEach(route => {
             this.app.use('/', route.router);
         });
+    }
+    initializeSwagger() {
+        const options = {
+            swaggerDefinition: {
+                info: {
+                    title: 'REST Human Resource API',
+                    version: '1.0.0',
+                    description: 'A RESTful api that enables admins to create departments and employees and also assign employees to departments created by Fredrick Yalley',
+                },
+            },
+            apis: ['swagger.yaml'],
+        };
+        const specs = (0, swagger_jsdoc_1.default)(options);
+        this.app.use('/api-docs', swagger_ui_express_1.default.serve, swagger_ui_express_1.default.setup(specs));
+    }
+    initializeErrorHandling() {
+        this.app.use(error_middleware_1.default);
     }
 }
 exports.default = App;

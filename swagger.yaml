@@ -1,0 +1,123 @@
+tags:
+- name: Admin
+  description: admin API
+
+paths:
+# [GET] Employees
+  /api/admin/employees:
+    get:
+      tags:
+      - employees
+      summary: Find All Employees
+      responses:
+        200:
+          description: 'OK'
+        500:
+          description: 'Server Error'
+
+# [POST] employees
+    post:
+      tags:
+      - Employees
+      summary: Add Employee
+      parameters:
+      - name: body
+        in: body
+        description: Employee Data
+        required: true
+        schema:
+          $ref: '#/definitions/employee'
+      responses:
+        201:
+          description: 'Created'
+        400:
+          description: 'Bad Request'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+
+# [GET] employee/id
+  /api/admin/employees/{id}:
+    get:
+      tags:
+      - employee
+      summary: Find Employee By Id
+      parameters:
+      - name: id
+        in: path
+        description: Employee Id
+        required: true
+        type: integer
+      responses:
+        200:
+          description: 'OK'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+
+# [PUT] employee/id
+    put:
+      tags:
+      - employee
+      summary: Update Employee By Id
+      parameters:
+      - name: id
+        in: path
+        description: employee Id
+        required: true
+        type: integer
+      - name: body
+        in: body
+        description: employee Data
+        required: true
+        schema:
+          $ref: '#/definitions/employee'
+      responses:
+        200:
+          description: 'OK'
+        400:
+          description: 'Bad Request'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+
+# [DELETE] employee/id
+    delete:
+      tags:
+      - employee
+      summary: Delete Employee By Id
+      parameters:
+      - name: id
+        in: path
+        description: employee Id
+        required: true
+        type: integer
+      responses:
+        200:
+          description: 'OK'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+
+# definitions
+definitions:
+  employee:
+    type: object
+    required:
+        - email
+        - password
+    properties:
+      email:
+        type: string
+        description: employee Email
+      password:
+        type: string
+        description: employee Password
+
+schemes:
+ - https
+ - http

@@ -9,6 +9,9 @@ import path from 'path';
 import { NODE_ENV, PORT, LOG_FORMAT, ORIGIN, CREDENTIALS} from './config';
 import { Routes } from './interfaces/routes.interface';
 import { logger, stream } from './utils/logger';
+import errorMiddleware from './middlewares/error.middleware';
+import swaggerJSDoc from 'swagger-jsdoc';
+import swaggerUi from 'swagger-ui-express';
 
 
 
@@ -26,8 +29,8 @@ class App {
 
         this.initializeMiddlewares();
         this.initializeRoutes(routes);
-    // this.initializeSwagger();
-    // this.initializeErrorHandling();
+        this.initializeSwagger();
+        this.initializeErrorHandling();
     }
 
 
@@ -61,25 +64,25 @@ class App {
         });
       }
 
-      // private initializeSwagger() {
-      //   const options = {
-      //     swaggerDefinition: {
-      //       info: {
-      //         title: 'REST API',
-      //         version: '1.0.0',
-      //         description: 'Example docs',
-      //       },
-      //     },
-      //     apis: ['swagger.yaml'],
-      //   };
+      private initializeSwagger() {
+        const options = {
+          swaggerDefinition: {
+            info: {
+              title: 'REST Human Resource API',
+              version: '1.0.0',
+              description: 'A RESTful api that enables admins to create departments and employees and also assign employees to departments created by Fredrick Yalley',
+            },
+          },
+          apis: ['swagger.yaml'],
+        };
     
-      //   const specs = swaggerJSDoc(options);
-      //   this.app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
-      // }
+        const specs = swaggerJSDoc(options);
+        this.app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
+      }
 
-      // private initializeErrorHandling() {
-      //   this.app.use(errorMiddleware);
-      // }
+      private initializeErrorHandling() {
+        this.app.use(errorMiddleware);
+      }
 }
 
 export default App;

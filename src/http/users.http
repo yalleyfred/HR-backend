@@ -1,0 +1,34 @@
+# baseURL
+@baseURL = http://localhost:6000
+
+###
+# Find All Employees
+GET {{ baseURL }}/employees
+
+###
+# Find Employee By Id
+GET {{ baseURL }}/employees/1
+
+###
+# Create Employee
+POST {{ baseURL }}/employees
+Content-Type: application/json
+
+{
+    "email": "example@email.com",
+	"password": "password"
+}
+
+###
+# Modify Employee By Id
+PUT {{ baseURL }}/employees/1
+Content-Type: application/json
+
+{
+    "email": "example@email.com",
+	"password": "password"
+}
+
+###
+# Delete Employee By Id
+DELETE {{ baseURL }}/employee/1

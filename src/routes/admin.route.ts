@@ -9,7 +9,7 @@ import authMiddleware from '../middlewares/adminAuth.middleware';
 import validationMiddleware from '../middlewares/validation.middleware';
 
 class AdminAuthRoute implements Routes {
-    public path = '/admin/';
+    public path = '/api/admin/';
     public router = Router();
     public authController = new AuthController();
     public employeeController = new EmployeeController();
@@ -28,11 +28,11 @@ class AdminAuthRoute implements Routes {
 
 
       this.router.get(`${this.path}departmentemployees/:id`, authMiddleware, this.departmentController.findAllDepartmentEmployees);
-      this.router.get(`${this.path}department`, authMiddleware, this.departmentController.getDepartments);
-      this.router.get(`${this.path}department/:id`, authMiddleware, this.departmentController.getDepartmentById);
-      this.router.post(`${this.path}department`, validationMiddleware(CreateDepartmentDto, 'body'), authMiddleware, this.departmentController.createDepartment);
-      this.router.put(`${this.path}department/:id`, validationMiddleware(CreateDepartmentDto, 'body', true), authMiddleware, this.departmentController.updateDepartment);
-      this.router.delete(`${this.path}department/:id`, authMiddleware, this.departmentController.deleteDepartment);
+      this.router.get(`${this.path}departments`, authMiddleware, this.departmentController.getDepartments);
+      this.router.get(`${this.path}departments/:id`, authMiddleware, this.departmentController.getDepartmentById);
+      this.router.post(`${this.path}departments`, validationMiddleware(CreateDepartmentDto, 'body'), authMiddleware, this.departmentController.createDepartment);
+      this.router.put(`${this.path}departments/:id`, validationMiddleware(CreateDepartmentDto, 'body', true), authMiddleware, this.departmentController.updateDepartment);
+      this.router.delete(`${this.path}departments/:id`, authMiddleware, this.departmentController.deleteDepartment);
 
 
       this.router.get(`${this.path}`, this.authController.getUsers);

@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "C:\\Users\\USER\\Desktop\\HR-backend\\src\\logs\\error\\.e6fd90639c2bf9ff91d153397114df59a5910774-audit.json",
+    "files": [
+        {
+            "date": 1675609938573,
+            "name": "C:\\Users\\USER\\Desktop\\HR-backend\\src\\logs\\error\\2023-02-05.log",
+            "hash": "f1461cdcbc73bed5908661e47e9def9e39a8d0d1581544a63e41285e1af21b47"
+        }
+    ],
+    "hashType": "sha256"
+}
