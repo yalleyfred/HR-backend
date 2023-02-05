@@ -1,5 +1,4 @@
 import { Model, Table, AutoIncrement, PrimaryKey, Column, AllowNull, NotEmpty } from 'sequelize-typescript';
-import {sequelize} from "../Database";
 
 interface EmployeesI {
   id: number | null;

@@ -7,6 +7,7 @@ const cors_1 = tslib_1.__importDefault(require("cors"));
 const express_1 = tslib_1.__importDefault(require("express"));
 const helmet_1 = tslib_1.__importDefault(require("helmet"));
 const hpp_1 = tslib_1.__importDefault(require("hpp"));
+const morgan_1 = tslib_1.__importDefault(require("morgan"));
 const config_1 = require("./config");
 const logger_1 = require("./utils/logger");
 const error_middleware_1 = tslib_1.__importDefault(require("./middlewares/error.middleware"));
@@ -16,7 +17,7 @@ class App {
     constructor(routes) {
         this.app = (0, express_1.default)();
         this.env = config_1.NODE_ENV || "production";
-        this.port = 6000;
+        this.port = 6000 || config_1.PORT;
         this.initializeMiddlewares();
         this.initializeRoutes(routes);
         this.initializeSwagger();
@@ -34,7 +35,7 @@ class App {
         return this.app;
     }
     initializeMiddlewares() {
-        // this.app.use(morgan(LOG_FORMAT, { stream }));
+        this.app.use((0, morgan_1.default)(config_1.LOG_FORMAT, { stream: logger_1.stream }));
         this.app.use((0, cors_1.default)({ origin: config_1.ORIGIN, credentials: config_1.CREDENTIALS }));
         this.app.use((0, hpp_1.default)());
         this.app.use((0, helmet_1.default)());

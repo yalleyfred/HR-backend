@@ -5,7 +5,6 @@ import express from 'express';
 import helmet from 'helmet';
 import hpp from 'hpp';
 import morgan from 'morgan';
-import path from 'path';
 import { NODE_ENV, PORT, LOG_FORMAT, ORIGIN, CREDENTIALS} from './config';
 import { Routes } from './interfaces/routes.interface';
 import { logger, stream } from './utils/logger';
@@ -25,7 +24,7 @@ class App {
     constructor(routes: Routes[]) {
         this.app = express();
         this.env = NODE_ENV || "production";
-        this.port = 6000;
+        this.port = 6000 || PORT;
 
         this.initializeMiddlewares();
         this.initializeRoutes(routes);
@@ -48,7 +47,7 @@ class App {
       }
 
       private initializeMiddlewares() {
-        // this.app.use(morgan(LOG_FORMAT, { stream }));
+        this.app.use(morgan(LOG_FORMAT, { stream }));
         this.app.use(cors({ origin: ORIGIN, credentials: CREDENTIALS }));
         this.app.use(hpp());
         this.app.use(helmet());
