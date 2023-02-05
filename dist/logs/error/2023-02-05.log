@@ -1,0 +1,234 @@
+2023-02-05 08:57:08 error: uncaughtException: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+Error: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1060:15)
+    at Module._load (node:internal/modules/cjs/loader:905:27)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+    at require (node:internal/modules/helpers:112:18)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js:6:51)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+2023-02-05 08:57:12 error: uncaughtException: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+Error: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1060:15)
+    at Module._load (node:internal/modules/cjs/loader:905:27)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+    at require (node:internal/modules/helpers:112:18)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js:6:51)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+2023-02-05 08:58:21 error: uncaughtException: Cannot find module './models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+Error: Cannot find module './models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1060:15)
+    at Module._load (node:internal/modules/cjs/loader:905:27)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+    at require (node:internal/modules/helpers:112:18)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js:6:51)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+2023-02-05 08:59:19 error: uncaughtException: Naming collision between attribute 'department' and association 'department' on model Employees. To remedy this, change either foreignKey or as in your association definition
+Error: Naming collision between attribute 'department' and association 'department' on model Employees. To remedy this, change either foreignKey or as in your association definition
+    at Object.checkNamingCollision (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\helpers.js:4:11)
+    at BelongsTo._injectAttributes (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\belongs-to.js:86:13)
+    at Employees.<anonymous> (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\mixin.js:72:17)
+    at Model.<computed> [as belongsTo] (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize-typescript\dist\model\model\model.js:128:28)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\Database.js:67:27)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+2023-02-05 08:59:23 error: uncaughtException: Naming collision between attribute 'department' and association 'department' on model Employees. To remedy this, change either foreignKey or as in your association definition
+Error: Naming collision between attribute 'department' and association 'department' on model Employees. To remedy this, change either foreignKey or as in your association definition
+    at Object.checkNamingCollision (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\helpers.js:4:11)
+    at BelongsTo._injectAttributes (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\belongs-to.js:86:13)
+    at Employees.<anonymous> (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\mixin.js:72:17)
+    at Model.<computed> [as belongsTo] (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize-typescript\dist\model\model\model.js:128:28)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\Database.js:67:27)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+2023-02-05 09:00:25 error: uncaughtException: Naming collision between attribute 'department' and association 'department' on model Employees. To remedy this, change either foreignKey or as in your association definition
+Error: Naming collision between attribute 'department' and association 'department' on model Employees. To remedy this, change either foreignKey or as in your association definition
+    at Object.checkNamingCollision (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\helpers.js:4:11)
+    at BelongsTo._injectAttributes (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\belongs-to.js:86:13)
+    at Employees.<anonymous> (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\mixin.js:72:17)
+    at Model.<computed> [as belongsTo] (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize-typescript\dist\model\model\model.js:128:28)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\Database.js:67:27)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+2023-02-05 09:00:48 error: uncaughtException: Naming collision between attribute 'department' and association 'department' on model Employees. To remedy this, change either foreignKey or as in your association definition
+Error: Naming collision between attribute 'department' and association 'department' on model Employees. To remedy this, change either foreignKey or as in your association definition
+    at Object.checkNamingCollision (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\helpers.js:4:11)
+    at BelongsTo._injectAttributes (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\belongs-to.js:86:13)
+    at Employees.<anonymous> (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\mixin.js:72:17)
+    at Model.<computed> [as belongsTo] (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize-typescript\dist\model\model\model.js:128:28)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\Database.js:67:27)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+2023-02-05 09:00:52 error: uncaughtException: Naming collision between attribute 'department' and association 'department' on model Employees. To remedy this, change either foreignKey or as in your association definition
+Error: Naming collision between attribute 'department' and association 'department' on model Employees. To remedy this, change either foreignKey or as in your association definition
+    at Object.checkNamingCollision (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\helpers.js:4:11)
+    at BelongsTo._injectAttributes (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\belongs-to.js:86:13)
+    at Employees.<anonymous> (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\mixin.js:72:17)
+    at Model.<computed> [as belongsTo] (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize-typescript\dist\model\model\model.js:128:28)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\Database.js:67:27)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+2023-02-05 09:01:25 error: uncaughtException: Naming collision between attribute 'department' and association 'department' on model Employees. To remedy this, change either foreignKey or as in your association definition
+Error: Naming collision between attribute 'department' and association 'department' on model Employees. To remedy this, change either foreignKey or as in your association definition
+    at Object.checkNamingCollision (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\helpers.js:4:11)
+    at BelongsTo._injectAttributes (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\belongs-to.js:86:13)
+    at Employees.<anonymous> (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\mixin.js:72:17)
+    at Model.<computed> [as belongsTo] (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize-typescript\dist\model\model\model.js:128:28)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\Database.js:67:27)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+2023-02-05 09:01:30 error: uncaughtException: Naming collision between attribute 'department' and association 'department' on model Employees. To remedy this, change either foreignKey or as in your association definition
+Error: Naming collision between attribute 'department' and association 'department' on model Employees. To remedy this, change either foreignKey or as in your association definition
+    at Object.checkNamingCollision (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\helpers.js:4:11)
+    at BelongsTo._injectAttributes (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\belongs-to.js:86:13)
+    at Employees.<anonymous> (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\mixin.js:72:17)
+    at Model.<computed> [as belongsTo] (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize-typescript\dist\model\model\model.js:128:28)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\Database.js:67:27)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+2023-02-05 09:02:16 error: uncaughtException: Naming collision between attribute 'department' and association 'department' on model Employees. To remedy this, change either foreignKey or as in your association definition
+Error: Naming collision between attribute 'department' and association 'department' on model Employees. To remedy this, change either foreignKey or as in your association definition
+    at Object.checkNamingCollision (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\helpers.js:4:11)
+    at BelongsTo._injectAttributes (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\belongs-to.js:86:13)
+    at Employees.<anonymous> (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\mixin.js:72:17)
+    at Model.<computed> [as belongsTo] (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize-typescript\dist\model\model\model.js:128:28)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\Database.js:67:27)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+2023-02-05 09:02:25 error: uncaughtException: Naming collision between attribute 'department' and association 'department' on model Employees. To remedy this, change either foreignKey or as in your association definition
+Error: Naming collision between attribute 'department' and association 'department' on model Employees. To remedy this, change either foreignKey or as in your association definition
+    at Object.checkNamingCollision (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\helpers.js:4:11)
+    at BelongsTo._injectAttributes (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\belongs-to.js:86:13)
+    at Employees.<anonymous> (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\mixin.js:72:17)
+    at Model.<computed> [as belongsTo] (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize-typescript\dist\model\model\model.js:128:28)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\Database.js:67:27)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+2023-02-05 09:02:30 error: uncaughtException: Naming collision between attribute 'department' and association 'department' on model Employees. To remedy this, change either foreignKey or as in your association definition
+Error: Naming collision between attribute 'department' and association 'department' on model Employees. To remedy this, change either foreignKey or as in your association definition
+    at Object.checkNamingCollision (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\helpers.js:4:11)
+    at BelongsTo._injectAttributes (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\belongs-to.js:86:13)
+    at Employees.<anonymous> (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\mixin.js:72:17)
+    at Model.<computed> [as belongsTo] (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize-typescript\dist\model\model\model.js:128:28)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\Database.js:67:27)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+2023-02-05 09:05:20 error: uncaughtException: Naming collision between attribute 'department' and association 'department' on model Employees. To remedy this, change either foreignKey or as in your association definition
+Error: Naming collision between attribute 'department' and association 'department' on model Employees. To remedy this, change either foreignKey or as in your association definition
+    at Object.checkNamingCollision (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\helpers.js:4:11)
+    at BelongsTo._injectAttributes (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\belongs-to.js:86:13)
+    at Employees.<anonymous> (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\mixin.js:72:17)
+    at Model.<computed> [as belongsTo] (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize-typescript\dist\model\model\model.js:128:28)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\Database.js:67:27)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+2023-02-05 09:05:30 error: uncaughtException: Naming collision between attribute 'department' and association 'department' on model Employees. To remedy this, change either foreignKey or as in your association definition
+Error: Naming collision between attribute 'department' and association 'department' on model Employees. To remedy this, change either foreignKey or as in your association definition
+    at Object.checkNamingCollision (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\helpers.js:4:11)
+    at BelongsTo._injectAttributes (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\belongs-to.js:86:13)
+    at Employees.<anonymous> (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\mixin.js:72:17)
+    at Model.<computed> [as belongsTo] (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize-typescript\dist\model\model\model.js:128:28)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\Database.js:67:27)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+2023-02-05 09:05:41 error: uncaughtException: Naming collision between attribute 'department' and association 'department' on model Employees. To remedy this, change either foreignKey or as in your association definition
+Error: Naming collision between attribute 'department' and association 'department' on model Employees. To remedy this, change either foreignKey or as in your association definition
+    at Object.checkNamingCollision (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\helpers.js:4:11)
+    at BelongsTo._injectAttributes (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\belongs-to.js:86:13)
+    at Employees.<anonymous> (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\mixin.js:72:17)
+    at Model.<computed> [as belongsTo] (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize-typescript\dist\model\model\model.js:128:28)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\Database.js:67:27)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+2023-02-05 09:05:45 error: uncaughtException: Naming collision between attribute 'department' and association 'department' on model Employees. To remedy this, change either foreignKey or as in your association definition
+Error: Naming collision between attribute 'department' and association 'department' on model Employees. To remedy this, change either foreignKey or as in your association definition
+    at Object.checkNamingCollision (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\helpers.js:4:11)
+    at BelongsTo._injectAttributes (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\belongs-to.js:86:13)
+    at Employees.<anonymous> (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize\lib\associations\mixin.js:72:17)
+    at Model.<computed> [as belongsTo] (C:\Users\USER\Desktop\HR-backend\node_modules\sequelize-typescript\dist\model\model\model.js:128:28)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\Database.js:67:27)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)

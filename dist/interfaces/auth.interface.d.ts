@@ -1,5 +1,5 @@
 import { Request } from 'express';
-import { EmployeeInt, User } from './employees.interface.ts';
+import { EmployeeInt, Admin } from './employees.interface.ts';
 export interface DataStoredInToken {
     id: number;
 }
@@ -10,6 +10,6 @@ export interface TokenData {
 export interface RequestWithEmployee extends Request {
     user: EmployeeInt;
 }
-export interface RequestWithUser extends Request {
-    user: User;
+export interface RequestWithAdmin extends Request {
+    user: Admin;
 }

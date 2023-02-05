@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 import { CreateEmployeeDto } from '../dtos/users.dto';
-import { User, EmployeeInt } from '../interfaces/employees.interface.ts';
+import { Admin, EmployeeInt } from '../interfaces/employees.interface.ts';
 import EmployeeService from '../services/employees.service';
 
 
@@ -32,7 +32,7 @@ class EmployeeController {
   public createEmployee = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const userData: CreateEmployeeDto = req.body;
-      // console.log(userData);
+
       const createUserData: EmployeeInt = await this.employeeService.createEmployee(userData);
 
       res.status(201).json({ data: createUserData, message: 'created' });

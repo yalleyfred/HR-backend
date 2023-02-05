@@ -5,7 +5,6 @@ const jsonwebtoken_1 = require("jsonwebtoken");
 const config_1 = require("../config");
 const HttpException_1 = require("../exceptions/HttpException");
 const employees_model_1 = tslib_1.__importDefault(require("../models/employees.model"));
-const admins_model_1 = tslib_1.__importDefault(require("../models/admins.model"));
 const authMiddleware = async (req, res, next) => {
     try {
         const Authorization = req.cookies['Authorization'] || (req.header('Authorization') ? req.header('Authorization').split('Bearer ')[1] : null);
@@ -18,13 +17,8 @@ const authMiddleware = async (req, res, next) => {
                     id: userId
                 }
             });
-            const findAdmin = await admins_model_1.default.findOne({
-                where: {
-                    id: userId
-                }
-            });
-            if (findEmployee || findAdmin) {
-                req.user = findEmployee || findAdmin;
+            if (findEmployee) {
+                req.user = findEmployee;
                 next();
             }
             else {
@@ -40,4 +34,4 @@ const authMiddleware = async (req, res, next) => {
     }
 };
 exports.default = authMiddleware;
-//# sourceMappingURL=auth.middleware.js.map
+//# sourceMappingURL=employeeAuth.middleware.js.map

@@ -10,16 +10,16 @@ const admins_model_1 = tslib_1.__importDefault(require("../models/admins.model")
 const util_1 = require("../utils/util");
 class AdminAuthService {
     constructor() {
-        this.users = admins_model_1.default;
+        this.admin = admins_model_1.default;
     }
     async findAllUser() {
-        const users = await this.users.findAll();
+        const users = await this.admin.findAll();
         return users;
     }
     async signup(userData) {
         if ((0, util_1.isEmpty)(userData))
             throw new HttpException_1.HttpException(400, "userData is empty");
-        const findUser = await this.users.findOne({
+        const findUser = await this.admin.findOne({
             where: {
                 email: userData.email,
             },
@@ -28,13 +28,13 @@ class AdminAuthService {
             throw new HttpException_1.HttpException(409, `This email ${userData.email} already exists`);
         const hashedPassword = await (0, bcrypt_1.hash)(userData.password, 10);
         const createUserData = { name: userData.name, email: userData.email, password: hashedPassword };
-        await this.users.create(createUserData);
+        await this.admin.create(createUserData);
         return createUserData;
     }
     async login(userData) {
         if ((0, util_1.isEmpty)(userData))
             throw new HttpException_1.HttpException(400, "userData is empty");
-        const findUser = await this.users.findOne({
+        const findUser = await this.admin.findOne({
             where: {
                 email: userData.email,
             },
@@ -51,7 +51,7 @@ class AdminAuthService {
     async logout(userData) {
         if ((0, util_1.isEmpty)(userData))
             throw new HttpException_1.HttpException(400, "userData is empty");
-        const findUser = await this.users.findOne({
+        const findUser = await this.admin.findOne({
             where: {
                 email: userData.email,
                 password: userData.password

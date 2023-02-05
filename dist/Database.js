@@ -1,9 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.DB = exports.Database = exports.sequelize = void 0;
+const tslib_1 = require("tslib");
 const sequelize_typescript_1 = require("sequelize-typescript");
-// import Course from "./models/course.model";
-// import Topic from "./models/topics.model";
+const department_model_1 = tslib_1.__importDefault(require("./models/department.model"));
+const employees_model_1 = tslib_1.__importDefault(require("./models/employees.model"));
 const config_1 = require("./config");
 const isProduction = process.env.NODE_ENV === 'production';
 exports.sequelize = new sequelize_typescript_1.Sequelize(config_1.db_name, config_1.db_user, config_1.db_password, {
@@ -59,12 +60,12 @@ const DB = () => {
     }
 };
 exports.DB = DB;
-// Course.hasMany(Topic, {
-//   foreignKey: "course_id",
-//   as: "topics"
-// });
-// Topic.belongsTo(Course, {
-//   foreignKey: "course_id",
-//   as: "courses"
-// })
+department_model_1.default.hasMany(employees_model_1.default, {
+    foreignKey: "dept_id",
+    as: "employees"
+});
+employees_model_1.default.belongsTo(department_model_1.default, {
+    foreignKey: "dept_id",
+    as: "departments"
+});
 //# sourceMappingURL=Database.js.map

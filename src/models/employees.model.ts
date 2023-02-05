@@ -15,6 +15,7 @@ interface EmployeesI {
   department: string;
   snnit_no: string;
   tin: string;
+  dept_id: number | null;
 };
 
 @Table({
@@ -89,6 +90,10 @@ export default class Employees extends Model implements EmployeesI{
     @NotEmpty
     @Column
     tin!: string
+
+    @AllowNull(true)
+    @Column
+    dept_id: number 
 }
 
 

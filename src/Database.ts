@@ -1,6 +1,6 @@
 import { Sequelize } from 'sequelize-typescript';
-// import Course from "./models/course.model";
-// import Topic from "./models/topics.model";
+import Department from "./models/department.model";
+import Employee from "./models/employees.model";
 import { db_host, db_name, db_password, db_user, DB_PORT, PDB_HOST, PDB_NAME, PDB_PASSWORD, PDB_PORT, PDB_USER } from './config';
 
 const isProduction = process.env.NODE_ENV === 'production';
@@ -63,13 +63,13 @@ export const DB = () => {
     }
   };
 
-// Course.hasMany(Topic, {
-//   foreignKey: "course_id",
-//   as: "topics"
-// });
+Department.hasMany(Employee, {
+  foreignKey: "dept_id",
+  as: "employees"
+});
 
-// Topic.belongsTo(Course, {
-//   foreignKey: "course_id",
-//   as: "courses"
-// })
+Employee.belongsTo(Department, {
+  foreignKey: "dept_id",
+  as: "departments"
+})
   

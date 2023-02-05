@@ -4,9 +4,8 @@ import { SECRET_KEY } from '../config';
 import { CreateEmployeeDto, LoginUserDto } from '../dtos/users.dto';
 import { HttpException } from '../exceptions/HttpException';
 import { DataStoredInToken, TokenData } from '../interfaces/auth.interface';
-import { EmployeeInt, User } from '../interfaces/employees.interface.ts';
+import { EmployeeInt, Admin } from '../interfaces/employees.interface.ts';
 import Employees from '../models/employees.model';
-// import {LocalDB} from '../Database'
 import { isEmpty } from '../utils/util';
 
 class EmployeesAuthService {
@@ -62,6 +61,7 @@ class EmployeesAuthService {
       department: string;
       snnit_no: string;
       tin: string;
+      dept_id: number;
     }= await this.employee.findOne({
       where: {
         email: userData.email,
@@ -98,6 +98,7 @@ class EmployeesAuthService {
       department: string;
       snnit_no: string;
       tin: string;
+      dept_id: number;
     } = await this.employee.findOne({
       where: {
         email: userData.email,

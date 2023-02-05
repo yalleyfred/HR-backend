@@ -2,6 +2,7 @@ import { NextFunction, Request, Response } from 'express';
 import DepartmentService from '../services/department.service';
 declare class DepartmentController {
     departmentService: DepartmentService;
+    findAllDepartmentEmployees: (req: Request, res: Response, next: NextFunction) => Promise<void>;
     getDepartments: (req: Request, res: Response, next: NextFunction) => Promise<void>;
     getDepartmentById: (req: Request, res: Response, next: NextFunction) => Promise<void>;
     createDepartment: (req: Request, res: Response, next: NextFunction) => Promise<void>;

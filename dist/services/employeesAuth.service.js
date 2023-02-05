@@ -6,7 +6,6 @@ const jsonwebtoken_1 = require("jsonwebtoken");
 const config_1 = require("../config");
 const HttpException_1 = require("../exceptions/HttpException");
 const employees_model_1 = tslib_1.__importDefault(require("../models/employees.model"));
-// import {LocalDB} from '../Database'
 const util_1 = require("../utils/util");
 class EmployeesAuthService {
     constructor() {

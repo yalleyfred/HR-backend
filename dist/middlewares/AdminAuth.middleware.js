@@ -4,7 +4,6 @@ const tslib_1 = require("tslib");
 const jsonwebtoken_1 = require("jsonwebtoken");
 const config_1 = require("../config");
 const HttpException_1 = require("../exceptions/HttpException");
-const employees_model_1 = tslib_1.__importDefault(require("../models/employees.model"));
 const admins_model_1 = tslib_1.__importDefault(require("../models/admins.model"));
 const authMiddleware = async (req, res, next) => {
     try {
@@ -13,18 +12,13 @@ const authMiddleware = async (req, res, next) => {
             const secretKey = config_1.SECRET_KEY;
             const verificationResponse = (await (0, jsonwebtoken_1.verify)(Authorization, secretKey));
             const userId = verificationResponse.id;
-            const findEmployee = await employees_model_1.default.findOne({
-                where: {
-                    id: userId
-                }
-            });
             const findAdmin = await admins_model_1.default.findOne({
                 where: {
                     id: userId
                 }
             });
-            if (findEmployee || findAdmin) {
-                req.user = findEmployee || findAdmin;
+            if (findAdmin) {
+                req.user = findAdmin;
                 next();
             }
             else {
@@ -40,4 +34,4 @@ const authMiddleware = async (req, res, next) => {
     }
 };
 exports.default = authMiddleware;
-//# sourceMappingURL=auth.middleware.js.map
+//# sourceMappingURL=adminAuth.middleware.js.map

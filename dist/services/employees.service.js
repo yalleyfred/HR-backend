@@ -4,10 +4,12 @@ const tslib_1 = require("tslib");
 const bcrypt_1 = require("bcrypt");
 const HttpException_1 = require("../exceptions/HttpException");
 const employees_model_1 = tslib_1.__importDefault(require("../models/employees.model"));
+const department_model_1 = tslib_1.__importDefault(require("../models/department.model"));
 const util_1 = require("../utils/util");
 class EmployeeService {
     constructor() {
         this.employee = employees_model_1.default;
+        this.department = department_model_1.default;
     }
     async findAllEmployees() {
         const users = await this.employee.findAll();
@@ -22,15 +24,23 @@ class EmployeeService {
     async createEmployee(userData) {
         if ((0, util_1.isEmpty)(userData))
             throw new HttpException_1.HttpException(400, "EmployeeData is empty");
-        const findUser = await this.employee.findOne({
+        const findDepartment = await this.department.findOne({
+            where: {
+                name: userData.department,
+            },
+        });
+        if (!findDepartment)
+            throw new HttpException_1.HttpException(409, `This Department ${userData.department} does not exists`);
+        let id = Number(findDepartment.id);
+        const findEmployee = await this.employee.findOne({
             where: {
                 email: userData.email,
             },
         });
-        if (findUser)
+        if (findEmployee)
             throw new HttpException_1.HttpException(409, `This email ${userData.email} already exists`);
         const hashedPassword = await (0, bcrypt_1.hash)(userData.password, 10);
-        const createUserData = { first_name: userData.first_name, last_name: userData.last_name, email: userData.email, password: hashedPassword, gender: userData.gender, dob: userData.dob, nationality: userData.nationality, highest_qualifications: userData.highest_qualifications, phone: userData.phone, department: userData.department, snnit_no: userData.snnit_no, tin: userData.tin };
+        const createUserData = { first_name: userData.first_name, last_name: userData.last_name, email: userData.email, password: hashedPassword, gender: userData.gender, dob: userData.dob, nationality: userData.nationality, highest_qualifications: userData.highest_qualifications, phone: userData.phone, department: userData.department, snnit_no: userData.snnit_no, tin: userData.tin, dept_id: id };
         await this.employee.create(createUserData);
         return createUserData;
     }
@@ -40,7 +50,6 @@ class EmployeeService {
         const findUser = await this.employee.findOne({ where: { id: userId } });
         if (!findUser)
             throw new HttpException_1.HttpException(409, "Employee doesn't exist");
-        // console.log(findUser);
         const hashedPassword = await (0, bcrypt_1.hash)(userData.password, 10);
         const updateUserData = await this.employee.update({ first_name: userData.first_name, last_name: userData.last_name, email: userData.email, password: hashedPassword, gender: userData.gender, dob: userData.dob, nationality: userData.nationality, highest_qualifications: userData.highest_qualifications, phone: userData.phone, department: userData.department, snnit_no: userData.snnit_no, tin: userData.tin }, {
             where: {

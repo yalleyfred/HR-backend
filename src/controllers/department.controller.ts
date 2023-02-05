@@ -7,6 +7,18 @@ import DepartmentService from '../services/department.service';
 class DepartmentController {
     public departmentService = new DepartmentService();
 
+    public findAllDepartmentEmployees = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+      try {
+        const deptId = Number(req.params.id);
+        const findAllDepartmentData: DepartmentInt[] = await this.departmentService.findAllDepartmentEmployees(deptId);
+      
+        
+        res.status(200).json({ data: findAllDepartmentData, message: 'findAll' });
+      } catch (error) {
+        next(error);
+      }
+    };
+
     public getDepartments = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
         try {
           const findAllDepartmentData: DepartmentInt[] = await this.departmentService.findAllDepartment();

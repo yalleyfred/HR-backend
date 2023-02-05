@@ -5,7 +5,7 @@ import DepartmentController from '../controllers/department.controller';
 import { CreateUserDto, LoginUserDto, CreateEmployeeDto } from '../dtos/users.dto';
 import { CreateDepartmentDto} from '../dtos/department.dto';
 import { Routes } from '../interfaces/routes.interface';
-import authMiddleware from '../middlewares/auth.middleware';
+import authMiddleware from '../middlewares/adminAuth.middleware';
 import validationMiddleware from '../middlewares/validation.middleware';
 
 class AdminAuthRoute implements Routes {
@@ -27,6 +27,7 @@ class AdminAuthRoute implements Routes {
       this.router.delete(`${this.path}employees/:id`, authMiddleware, this.employeeController.deleteEmployee);
 
 
+      this.router.get(`${this.path}departmentemployees/:id`, authMiddleware, this.departmentController.findAllDepartmentEmployees);
       this.router.get(`${this.path}department`, authMiddleware, this.departmentController.getDepartments);
       this.router.get(`${this.path}department/:id`, authMiddleware, this.departmentController.getDepartmentById);
       this.router.post(`${this.path}department`, validationMiddleware(CreateDepartmentDto, 'body'), authMiddleware, this.departmentController.createDepartment);

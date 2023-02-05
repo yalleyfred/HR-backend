@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from "express";
 import { CreateUserDto, LoginUserDto } from "../dtos/users.dto";
-import { RequestWithUser } from "../interfaces/auth.interface";
-import { User } from "../interfaces/employees.interface.ts";
+import { RequestWithAdmin, RequestWithEmployee } from "../interfaces/auth.interface";
+import { Admin } from "../interfaces/employees.interface.ts";
 import AuthService from "../services/adminAut.service";
 
 class AdminAuthController {
@@ -13,7 +13,7 @@ class AdminAuthController {
     next: NextFunction
   ): Promise<void> => {
     try {
-      const findAllUsersData: User[] = await this.authService.findAllUser();
+      const findAllUsersData: Admin[] = await this.authService.findAllUser();
 
       res.status(200).json({ data: findAllUsersData, message: "findAll" });
     } catch (error) {
@@ -28,7 +28,7 @@ class AdminAuthController {
   ): Promise<void> => {
     try {
       const userData: CreateUserDto = req.body;
-      const signUpUserData: User = await this.authService.signup(userData);
+      const signUpUserData: Admin = await this.authService.signup(userData);
 
       res.status(201).json({ data: signUpUserData, message: "signup" });
     } catch (error) {
@@ -54,13 +54,13 @@ class AdminAuthController {
   };
 
   public logOut = async (
-    req: RequestWithUser,
+    req: RequestWithAdmin,
     res: Response,
     next: NextFunction
   ): Promise<void> => {
     try {
-      const userData: User = req.user;
-      const logOutUserData: User = await this.authService.logout(userData);
+      const userData: Admin = req.user;
+      const logOutUserData: Admin = await this.authService.logout(userData);
 
       res.setHeader("Set-Cookie", ["Authorization=; Max-age=0"]);
       res.status(200).json({ data: logOutUserData, message: "logout" });

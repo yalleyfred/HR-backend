@@ -10,11 +10,11 @@ import Admins from '../models/admins.model';
 import { isEmpty } from '../utils/util';
 
 class AdminAuthService {
-  public users = Admins;
+  public admin = Admins;
 
   public async findAllUser(): Promise<User[]> {
     
-    const users: User[] = await this.users.findAll();
+    const users: User[] = await this.admin.findAll();
     return users;
   }
 
@@ -22,7 +22,7 @@ class AdminAuthService {
     
     if (isEmpty(userData)) throw new HttpException(400, "userData is empty");
 
-    const findUser: User = await this.users.findOne({
+    const findUser: User = await this.admin.findOne({
       where: {
         email: userData.email,
       },
@@ -36,7 +36,7 @@ class AdminAuthService {
       password: string;
     }
     = { name: userData.name, email: userData.email, password: hashedPassword };
-    await this.users.create(createUserData)
+    await this.admin.create(createUserData)
 
     return createUserData;
   }
@@ -50,7 +50,7 @@ class AdminAuthService {
       email: string;
       name: string;
       password: string;
-    } = await this.users.findOne({
+    } = await this.admin.findOne({
       where: {
         email: userData.email,
       },
@@ -74,7 +74,7 @@ class AdminAuthService {
     
     if (isEmpty(userData)) throw new HttpException(400, "userData is empty");
 
-    const findUser: User = await this.users.findOne({
+    const findUser: User = await this.admin.findOne({
       where: {
         email: userData.email,
         password: userData.password

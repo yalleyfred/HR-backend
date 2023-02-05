@@ -2,7 +2,7 @@ import { Router } from 'express';
 import EmployeeAuthController from '../controllers/employeeAuth.controller';
 import { CreateEmployeeDto, LoginUserDto } from '../dtos/users.dto';
 import { Routes } from '../interfaces/routes.interface';
-import authMiddleware from '../middlewares/auth.middleware';
+import authMiddleware from '../middlewares/employeeAuth.middleware';
 import validationMiddleware from '../middlewares/validation.middleware';
 
 class AuthRoute implements Routes {

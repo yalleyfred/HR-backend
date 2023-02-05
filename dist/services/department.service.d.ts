@@ -3,6 +3,7 @@ import { DepartmentInt } from '../interfaces/department.interface';
 import Departments from '../models/department.model';
 declare class DepartmentService {
     department: typeof Departments;
+    findAllDepartmentEmployees(deptId: number): Promise<DepartmentInt[]>;
     findAllDepartment(): Promise<DepartmentInt[]>;
     findDepartmentById(deptId: number): Promise<DepartmentInt>;
     createDepartment(departmentData: CreateDepartmentDto): Promise<DepartmentInt>;

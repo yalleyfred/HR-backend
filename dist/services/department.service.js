@@ -3,10 +3,23 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
 const HttpException_1 = require("../exceptions/HttpException");
 const department_model_1 = tslib_1.__importDefault(require("../models/department.model"));
+const employees_model_1 = tslib_1.__importDefault(require("../models/employees.model"));
 const util_1 = require("../utils/util");
 class DepartmentService {
     constructor() {
         this.department = department_model_1.default;
+    }
+    async findAllDepartmentEmployees(deptId) {
+        const department = await this.department.findAll({
+            include: [{
+                    model: employees_model_1.default,
+                    as: 'employees'
+                }],
+            where: {
+                id: deptId
+            }
+        });
+        return department;
     }
     async findAllDepartment() {
         const departments = await this.department.findAll();

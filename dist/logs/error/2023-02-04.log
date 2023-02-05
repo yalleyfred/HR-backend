@@ -1,0 +1,462 @@
+2023-02-04 18:22:52 error: uncaughtException: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+Error: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1060:15)
+    at Module._load (node:internal/modules/cjs/loader:905:27)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+    at require (node:internal/modules/helpers:112:18)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js:6:51)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+2023-02-04 18:22:57 error: uncaughtException: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+Error: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1060:15)
+    at Module._load (node:internal/modules/cjs/loader:905:27)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+    at require (node:internal/modules/helpers:112:18)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js:6:51)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+2023-02-04 18:23:01 error: uncaughtException: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+Error: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1060:15)
+    at Module._load (node:internal/modules/cjs/loader:905:27)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+    at require (node:internal/modules/helpers:112:18)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js:6:51)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+2023-02-04 18:26:00 error: uncaughtException: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+Error: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1060:15)
+    at Module._load (node:internal/modules/cjs/loader:905:27)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+    at require (node:internal/modules/helpers:112:18)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js:6:51)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+2023-02-04 18:26:09 error: uncaughtException: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+Error: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1060:15)
+    at Module._load (node:internal/modules/cjs/loader:905:27)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+    at require (node:internal/modules/helpers:112:18)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js:6:51)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+2023-02-04 18:26:14 error: uncaughtException: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+Error: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1060:15)
+    at Module._load (node:internal/modules/cjs/loader:905:27)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+    at require (node:internal/modules/helpers:112:18)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js:6:51)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+2023-02-04 18:26:30 error: uncaughtException: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+Error: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1060:15)
+    at Module._load (node:internal/modules/cjs/loader:905:27)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+    at require (node:internal/modules/helpers:112:18)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js:6:51)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+2023-02-04 18:26:47 error: uncaughtException: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+Error: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1060:15)
+    at Module._load (node:internal/modules/cjs/loader:905:27)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+    at require (node:internal/modules/helpers:112:18)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js:6:51)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+2023-02-04 18:26:51 error: uncaughtException: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+Error: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1060:15)
+    at Module._load (node:internal/modules/cjs/loader:905:27)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+    at require (node:internal/modules/helpers:112:18)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js:6:51)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+2023-02-04 18:27:01 error: uncaughtException: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+Error: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1060:15)
+    at Module._load (node:internal/modules/cjs/loader:905:27)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+    at require (node:internal/modules/helpers:112:18)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js:6:51)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+2023-02-04 18:27:11 error: uncaughtException: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+Error: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1060:15)
+    at Module._load (node:internal/modules/cjs/loader:905:27)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+    at require (node:internal/modules/helpers:112:18)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js:6:51)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+2023-02-04 18:27:15 error: uncaughtException: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+Error: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1060:15)
+    at Module._load (node:internal/modules/cjs/loader:905:27)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+    at require (node:internal/modules/helpers:112:18)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js:6:51)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+2023-02-04 18:28:23 error: uncaughtException: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+Error: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1060:15)
+    at Module._load (node:internal/modules/cjs/loader:905:27)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+    at require (node:internal/modules/helpers:112:18)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js:6:51)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+2023-02-04 18:28:31 error: uncaughtException: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+Error: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1060:15)
+    at Module._load (node:internal/modules/cjs/loader:905:27)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+    at require (node:internal/modules/helpers:112:18)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js:6:51)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+2023-02-04 18:28:35 error: uncaughtException: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+Error: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1060:15)
+    at Module._load (node:internal/modules/cjs/loader:905:27)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+    at require (node:internal/modules/helpers:112:18)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js:6:51)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+2023-02-04 18:31:36 error: uncaughtException: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+Error: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1060:15)
+    at Module._load (node:internal/modules/cjs/loader:905:27)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+    at require (node:internal/modules/helpers:112:18)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js:6:51)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+2023-02-04 18:31:43 error: uncaughtException: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+Error: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1060:15)
+    at Module._load (node:internal/modules/cjs/loader:905:27)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+    at require (node:internal/modules/helpers:112:18)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js:6:51)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+2023-02-04 18:31:47 error: uncaughtException: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+Error: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1060:15)
+    at Module._load (node:internal/modules/cjs/loader:905:27)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+    at require (node:internal/modules/helpers:112:18)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js:6:51)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+2023-02-04 18:35:41 error: uncaughtException: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+Error: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1060:15)
+    at Module._load (node:internal/modules/cjs/loader:905:27)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+    at require (node:internal/modules/helpers:112:18)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js:6:51)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+2023-02-04 18:35:50 error: uncaughtException: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+Error: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1060:15)
+    at Module._load (node:internal/modules/cjs/loader:905:27)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+    at require (node:internal/modules/helpers:112:18)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js:6:51)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+2023-02-04 18:35:54 error: uncaughtException: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+Error: Cannot find module '@/models/employees.model'
+Require stack:
+- C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js
+- C:\Users\USER\Desktop\HR-backend\dist\controllers\department.controller.js
+- C:\Users\USER\Desktop\HR-backend\dist\routes\admin.route.js
+- C:\Users\USER\Desktop\HR-backend\dist\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1060:15)
+    at Module._load (node:internal/modules/cjs/loader:905:27)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)
+    at require (node:internal/modules/helpers:112:18)
+    at Object.<anonymous> (C:\Users\USER\Desktop\HR-backend\dist\services\department.service.js:6:51)
+    at Module._compile (node:internal/modules/cjs/loader:1246:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1300:10)
+    at Module.load (node:internal/modules/cjs/loader:1103:32)
+    at Module._load (node:internal/modules/cjs/loader:942:12)
+    at Module.require (node:internal/modules/cjs/loader:1127:19)

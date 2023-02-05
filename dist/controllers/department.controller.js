@@ -5,6 +5,16 @@ const department_service_1 = tslib_1.__importDefault(require("../services/depart
 class DepartmentController {
     constructor() {
         this.departmentService = new department_service_1.default();
+        this.findAllDepartmentEmployees = async (req, res, next) => {
+            try {
+                const deptId = Number(req.params.id);
+                const findAllDepartmentData = await this.departmentService.findAllDepartmentEmployees(deptId);
+                res.status(200).json({ data: findAllDepartmentData, message: 'findAll' });
+            }
+            catch (error) {
+                next(error);
+            }
+        };
         this.getDepartments = async (req, res, next) => {
             try {
                 const findAllDepartmentData = await this.departmentService.findAllDepartment();

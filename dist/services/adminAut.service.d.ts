@@ -3,7 +3,7 @@ import { TokenData } from '../interfaces/auth.interface';
 import { User } from '../interfaces/admin.interface';
 import Admins from '../models/admins.model';
 declare class AdminAuthService {
-    users: typeof Admins;
+    admin: typeof Admins;
     findAllUser(): Promise<User[]>;
     signup(userData: CreateUserDto): Promise<User>;
     login(userData: LoginUserDto): Promise<{

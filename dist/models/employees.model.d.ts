@@ -13,6 +13,7 @@ interface EmployeesI {
     department: string;
     snnit_no: string;
     tin: string;
+    dept_id: number | null;
 }
 export default class Employees extends Model implements EmployeesI {
     id: number;
@@ -28,5 +29,6 @@ export default class Employees extends Model implements EmployeesI {
     department: string;
     snnit_no: string;
     tin: string;
+    dept_id: number;
 }
 export {};

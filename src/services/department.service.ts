@@ -3,10 +3,24 @@ import { CreateDepartmentDto } from '../dtos/department.dto';
 import { HttpException } from '../exceptions/HttpException';
 import { DepartmentInt } from '../interfaces/department.interface';
 import Departments from '../models/department.model';
+import Employees from '../models/employees.model';
 import { isEmpty } from '../utils/util';
 
 class DepartmentService {
     public department = Departments;
+
+    public async findAllDepartmentEmployees(deptId: number): Promise<DepartmentInt[]> {
+      const department: DepartmentInt[] = await this.department.findAll({
+        include: [{
+          model: Employees,
+          as: 'employees'
+        }],
+        where:{
+          id: deptId
+        }
+      });
+      return department;
+    }
 
     public async findAllDepartment(): Promise<DepartmentInt[]> {
 

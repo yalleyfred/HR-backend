@@ -1,8 +1,8 @@
 import { NextFunction, Request, Response } from 'express';
 import { async } from 'rxjs';
 import { CreateEmployeeDto, LoginUserDto, CreateUserDto } from '../dtos/users.dto';
-import { RequestWithEmployee, RequestWithUser } from '../interfaces/auth.interface';
-import { EmployeeInt, User } from '../interfaces/employees.interface.ts';
+import { RequestWithEmployee, RequestWithAdmin } from '../interfaces/auth.interface';
+import { EmployeeInt, Admin } from '../interfaces/employees.interface.ts';
 // import {  User } from '../interfaces/admin.interface';
 import EmployeeAuthService from '../services/employeesAuth.service';
 

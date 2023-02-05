@@ -11,8 +11,9 @@ export interface EmployeeInt {
     department: string;
     snnit_no: string;
     tin: string;
+    dept_id: number;
 }
-export interface User {
+export interface Admin {
     name: string;
     email: string;
     password: string;
